@@ -1,0 +1,26 @@
+body {
+	font-family: 'Baskervville', serif;
+	font-size: 11pt;
+	background-color: #0f0f0f;
+	color: #fff;
+}
+
+.paragraph {
+	padding: 20px;
+}
+
+.paragraphcaption{
+	font-family: 'Baskervville', serif;
+	font-size: 24pt;
+}
+
+.paragraphcontent{
+	font-family: 'Roboto', sans-serif;
+}
+
+.paragraphimage {
+	background-color: #fff;
+	width: 500px;
+	height: 250px;
+}
+
