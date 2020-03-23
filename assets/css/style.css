@@ -5,22 +5,21 @@ body {
 	color: #fff;
 }
 
-.paragraph {
+.contentwrapper {
 	padding: 20px;
 }
 
-.paragraphcaption{
+h2 {
 	font-family: 'Baskervville', serif;
 	font-size: 24pt;
 }
 
-.paragraphcontent{
+p {
 	font-family: 'Roboto', sans-serif;
 }
 
-.paragraphimage {
-	background-color: #fff;
-	width: 500px;
-	height: 250px;
+img {
+	width: 100%;
+	height: auto;
 }
 
