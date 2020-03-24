@@ -24,7 +24,15 @@ img {
 }
 
 .image_decoration {
+	position: relative;
+}
+.image_decoration::after {
+	content: "";
+	position: absolute;
+	background-image: url("assets/images/image_decoration.png");
 	width: 50%;
 	height: auto;
-	
 }
+
+
+
