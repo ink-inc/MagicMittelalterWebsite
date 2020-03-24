@@ -7,6 +7,7 @@ body {
 
 .contentwrapper {
 	padding: 20px;
+	margin-bottom: 40px;
 }
 
 h2 {
@@ -24,15 +25,10 @@ img {
 }
 
 .image_decoration {
-	position: relative;
-}
-.image_decoration::after {
-	content: "";
 	position: absolute;
-	background-image: url("assets/images/image_decoration.png");
+	display: block;
 	width: 50%;
-	height: auto;
+	transform: translateX(50%);
+	margin-left: -35px;
 }
-
-
 
