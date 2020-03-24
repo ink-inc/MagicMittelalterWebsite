@@ -1,34 +1,35 @@
 body {
-	font-family: 'Baskervville', serif;
-	font-size: 11pt;
-	background-color: #0f0f0f;
-	color: #fff;
+  font-family: 'Baskervville', serif;
+  font-size: 11pt;
+  background-color: #0f0f0f;
+  color: #fff;
 }
 
 .contentwrapper {
-	padding: 20px;
-	margin-bottom: 40px;
+  padding: 20px;
+  margin-bottom: 40px;
 }
 
 h2 {
-	font-family: 'Baskervville', serif;
-	font-size: 24pt;
+  font-family: 'Baskervville', serif;
+  font-size: 24pt;
 }
 
 p {
-	font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 img {
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .image_decoration {
-	position: absolute;
-	display: block;
-	width: 50%;
-	transform: translateX(50%);
-	margin-left: -35px;
+  position: absolute;
+  display: block;
+  width: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  margin-left: -35px;
 }
-
+/*# sourceMappingURL=style.css.map */
