@@ -1,6 +1,7 @@
 body {
-  font-family: 'Baskervville', serif;
-  font-size: 11pt;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 100;
   background-color: #0f0f0f;
   color: #fff;
 }
@@ -12,7 +13,8 @@ body {
 
 h2 {
   font-family: 'Baskervville', serif;
-  font-size: 24pt;
+  font-size: 2em;
+  font-weight: 400;
 }
 
 p {
@@ -24,6 +26,12 @@ img {
   height: auto;
 }
 
+@media (max-width: 991px) {
+  .image {
+    margin-bottom: 40px;
+  }
+}
+
 .image_decoration {
   position: absolute;
   display: block;
@@ -31,5 +39,22 @@ img {
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
   margin-left: -35px;
+}
+
+@media (min-width: 1200px) {
+  .image_decoration_margin_bottom {
+    margin-bottom: 30px;
+  }
+}
+
+footer {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+  background-color: #202020;
+  padding: 12px;
+}
+
+footer * {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
