@@ -1,6 +1,14 @@
+
+$sm: 991px;
+$lg: 1200px;
+
+
 body {
-	font-family: 'Baskervville', serif;
-	font-size: 11pt;
+	font: {
+		family: 'Roboto', sans-serif;
+		size: 1em;
+		weight: 100;
+	}
 	background-color: #0f0f0f;
 	color: #fff;
 }
@@ -11,8 +19,11 @@ body {
 }
 
 h2 {
-	font-family: 'Baskervville', serif;
-	font-size: 24pt;
+	font: {
+		family: 'Baskervville', serif;
+		size: 2em;
+		weight: 400;
+	}
 }
 
 p {
@@ -24,6 +35,12 @@ img {
 	height: auto;
 }
 
+@media (max-width: $sm) {
+	.image {
+		margin-bottom: 40px;
+	}
+}
+
 .image_decoration {
 	position: absolute;
 	display: block;
@@ -32,3 +49,20 @@ img {
 	margin-left: -35px;
 }
 
+@media (min-width: $lg) {
+	.image_decoration_margin_bottom {
+		margin-bottom: 30px;
+	}
+}
+
+footer {
+	font: {
+		family: 'Roboto', sans-serif;
+		size: 0.9em;
+	}
+	background-color: #202020;
+	* {
+		text-align: center;
+	}
+	padding: 12px;
+}
