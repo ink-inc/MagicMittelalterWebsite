@@ -1,33 +1,81 @@
-
 $sm: 991px;
 $lg: 1200px;
-
 
 body {
 	font: {
 		family: 'Roboto', sans-serif;
-		size: 1em;
-		weight: 100;
+		size: 0.9em;
+		weight: 200;
 	}
 	background-color: #0f0f0f;
 	color: #fff;
 }
 
 .contentwrapper {
-	padding: 20px;
+	padding: 30px;
 	margin-bottom: 40px;
+}
+
+h1 {
+	font: {
+		family: 'Baskervville', serif;
+		size: 3.5em;
+		weight: 400;
+	}
+	text-align: center;
 }
 
 h2 {
 	font: {
 		family: 'Baskervville', serif;
-		size: 2em;
-		weight: 400;
+		size: 2.6em;
+		weight: 100;
+	}
+}
+
+h3 {
+	font: {
+		family: 'Baskervville', serif;
+		size: 1.4em;
+		weight: 100;
 	}
 }
 
 p {
 	font-family: 'Roboto', sans-serif;
+	margin-bottom: 0;
+	color: #8f8f8f;
+}
+
+.headerwrapper {
+	padding: 40px 35px 30px 25px;
+}
+header {
+	background-image: url("../images/Banner.png");
+	background-position: center;
+	padding: 60px 40px 0 40px;
+	margin-bottom: 30px;
+}
+.header_decoration {
+	position: relative;
+	width: 80%;
+}
+.header_decoration::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background: #eaa623;
+	margin-top: -9px;
+}
+.header_decoration::after {
+	content: "";
+	position: absolute;
+	width: 80%;
+	height: 3px;
+	background: #eaa623;
+	margin-top: 6px;
+	margin-left: 10%;
 }
 
 img {
@@ -60,9 +108,32 @@ footer {
 		family: 'Roboto', sans-serif;
 		size: 0.9em;
 	}
+	color: #8f8f8f;
 	background-color: #202020;
 	* {
 		text-align: center;
 	}
 	padding: 12px;
+}
+
+@media (max-width: 575px) {
+	.container {
+		margin: 0;
+		padding: 0;
+	}
+	header {
+		padding: 0;
+		
+	}
+	h1 {
+		margin: 10%;
+	}
+	.headerwrapper {
+		padding: 0;
+		margin: 0 5% 5%;
+	}
+	.contentwrapper {
+		padding: 0;
+		margin: 8% 5%;
+	}
 }
