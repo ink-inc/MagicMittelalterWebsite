@@ -49,6 +49,8 @@ p {
 header {
   background-image: url("../images/Banner.png");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 80px 40px 0 40px;
   margin-bottom: 30px;
 }
@@ -65,7 +67,7 @@ header {
   height: 3px;
   background: #eaa623;
   margin-top: -9px;
-  border-radius: 1px 1px;
+  border-radius: 50%;
 }
 
 .header_decoration::after {
