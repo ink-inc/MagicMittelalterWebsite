@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Baskervville|Roboto:100,400&display=swap');
+
+.background {
+	font: {
+		family: 'Roboto', sans-serif;
+		size: 0.9em;
+		weight: 400;
+	}
+	background-color: #0f0f0f;
+	color: #fff;
+}
+
+h1 {
+	font: {
+		family: 'Baskervville', serif;
+		size: 3.5em;
+		weight: 400;
+	}
+	text-align: center;
+}
+
+h2 {
+	font: {
+		family: 'Baskervville', serif;
+		size: 2.6em;
+		weight: 100;
+	}
+}
+
+h3 {
+	font: {
+		family: 'Baskervville', serif;
+		size: 1.4em;
+		weight: 100;
+	}
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 0;
+	color: #9f9f9f;
+}
