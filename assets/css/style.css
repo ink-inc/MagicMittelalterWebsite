@@ -59,7 +59,7 @@ header {
   height: 3px;
   background: #eaa623;
   margin-top: -9px;
-  border-radius: 1px 1px;
+  border-radius: 50%;
 }
 
 .header_decoration::after {
