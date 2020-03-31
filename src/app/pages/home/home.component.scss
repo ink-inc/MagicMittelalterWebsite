@@ -1,18 +1,13 @@
 $sm: 991px;
 $lg: 1200px;
 
-.contentwrapper {
-	padding: 30px;
-	margin-bottom: 40px;
-}
-
 .headerwrapper {
 	padding: 40px 35px 30px 25px;
 }
 header {
 	background-image: url("../../../assets/img/Banner.png");
 	background-position: center;
-	padding: 80px 40px 0 40px;
+	padding: 100px 40px 0 40px;
 	margin-bottom: 30px;
 }
 .header_decoration {
@@ -26,7 +21,7 @@ header {
 	height: 3px;
 	background: #eaa623;
 	margin-top: -9px;
-	border-radius: 1px 1px;
+	border-radius: 50%;
 }
 .header_decoration::after {
 	content: "";
@@ -37,6 +32,11 @@ header {
 	margin-top: 6px;
 	margin-left: 7.5%;
 	border-radius: 50%;
+}
+
+.contentwrapper {
+	padding: 30px;
+	margin-bottom: 40px;
 }
 
 img {
@@ -71,6 +71,7 @@ img {
 	}
 	header {
 		padding: 0;
+		padding-top: 50px;
 	}
 	h1 {
 		margin: 10%;

@@ -1,14 +1,54 @@
 nav {
-	position: fixed;
 	background-color: rgba(0, 0, 0, 0.5);
 	width: 100%;
-	height: 60px;
 	top: 0;
 	left: 0;
-	padding-left: 10%;
+	padding: 0 5%;
+	margin: 0;
 }
 
-.icon {
+.navbar-toggler-icon {
+	background-image: url("../../../assets/img/navbar-toggler.svg");
+	width: 35px;
+	height: 35px;
+}
+
+.navbar-icon {
+	flex-direction: row;
+}
+
+.nav-item:not(.icon) {
+	padding: 0 20px;
+}
+
+.nav-link {
+	font: {
+		family: 'Baskervville', serif;
+		size: 1.4em;
+	}
+	color: #fff;
+}
+
+.dropdown-toggle::after {
+	display: none;
+}
+
+.dropdown-menu {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+}
+.show {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+img {
 	width: 40px;
 	height: 40px;
+	padding: 0 8px;
+}
+
+@media (max-width: 575px) {
+	nav {
+		padding: 10px 10px;
+	}
 }

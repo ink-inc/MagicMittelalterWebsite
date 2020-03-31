@@ -1,31 +1,44 @@
-<nav class="row">
-    <div class="">
-        <h4>
-            Home
-        </h4>
+<nav class="navbar navbar-expand-md fixed-top">
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_navbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapse_navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_features" href="#">
+                    Features
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdown_features">
+                    <ul class="navbar-nav">
+                        <a class="dropdown-item">Feature 1</a>
+                        <a class="dropdown-item">Feature 2</a>
+                        <a class="dropdown-item">Feature 3</a>
+                        <a class="dropdown-item">Feature 4</a>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Builds</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Team</a>
+            </li>
+        </ul>
     </div>
-    <div class="">
-        <h4>
-            Features
-        </h4>
-    </div>
-    <div class="">
-        <h4>
-            Builds
-        </h4>
-    </div>
-    <div class="">
-        <h4>
-            Team
-        </h4>
-    </div>
-    <div class="icon">
-        <img src="../../../assets/img/email-24px.svg">
-    </div>
-    <div class="icon">
-        <img src="../../../assets/img/instagram-brands.svg">
-    </div>
-    <div class="icon">
-        <img src="../../../assets/img/discord-brands.svg">
-    </div>
+    <ul class="navbar-nav navbar-icon">
+        <li class="nav-item icon">
+            <a class="nav-link" href=""><img style="margin-left: auto;" src="../../../assets/img/email.svg"></a>
+        </li>
+        <li class="nav-item icon">
+            <a class="nav-link" href=""><img src="../../../assets/img/instagram.svg"></a>
+        </li>
+        <li class="nav-item icon">
+            <a class="nav-link" href=""><img src="../../../assets/img/discord.svg"></a>
+        </li>
+    </ul>
 </nav>
