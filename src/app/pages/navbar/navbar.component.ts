@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  navbarIsHidden = true;
+  dropdownIsShown = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  hideNavbar() {
+    this.navbarIsHidden = !this.navbarIsHidden;
+  }
+
+  showDropdown() {
+    this.dropdownIsShown = !this.dropdownIsShown;
   }
 
 }

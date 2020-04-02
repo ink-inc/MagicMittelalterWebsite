@@ -1,44 +1,28 @@
-<nav class="navbar navbar-expand-md fixed-top">
+<nav class="navbar fixed-top" [class.navbar-small]="!navbarIsHidden" [class.dropdown-wide]="dropdownIsShown">
+    <div class="row navbar-top">
+        <a (click)="hideNavbar()" class="navbar-toggle order-md-1" routerLink="">
+            <span class="navbar-toggle-icon"></span>
+        </a>
 
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_navbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        <div class="navbar-nav navbar-icon order-md-3">
+            <a class="navbar-link icon" href="" target="_blank"><img src="../../../assets/img/email.svg"></a>
+            <a class="navbar-link icon" href="" target="_blank"><img src="../../../assets/img/instagram.svg"></a>
+            <a class="navbar-link icon" href="https://discord.gg/RyG5Zaz" target="_blank"><img src="../../../assets/img/discord.svg"></a>
+        </div>
 
-    <div class="collapse navbar-collapse" id="collapse_navbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_features" href="#">
-                    Features
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdown_features">
-                    <ul class="navbar-nav">
-                        <a class="dropdown-item">Feature 1</a>
-                        <a class="dropdown-item">Feature 2</a>
-                        <a class="dropdown-item">Feature 3</a>
-                        <a class="dropdown-item">Feature 4</a>
-                    </ul>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Builds</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Team</a>
-            </li>
-        </ul>
+        <div class="navbar-nav collapse-navbar col-md-9 order-md-2" [class.hideNavbar]="navbarIsHidden" [class.dropdown-collapse-navbar]="!navbarIsHidden && dropdownIsShown">
+            <a class="navbar-link active" routerLink="">Home</a>
+
+            <a (click)="showDropdown()" class="navbar-link dropdown-toggle" routerLink="">Features</a>
+            <div class="navbar-dropdown" [class.showDropdown]="dropdownIsShown">
+                <a class="dropdown-link" routerLink="">Features 1</a>
+                <a class="dropdown-link" routerLink="">Features 2</a>
+                <a class="dropdown-link" routerLink="">Features 3</a>
+                <a class="dropdown-link" routerLink="">Features 4</a>
+            </div>
+
+            <a class="navbar-link" routerLink="">Builds</a>
+            <a class="navbar-link" routerLink="">Team</a>
+        </div>
     </div>
-    <ul class="navbar-nav navbar-icon">
-        <li class="nav-item icon">
-            <a class="nav-link" href=""><img style="margin-left: auto;" src="../../../assets/img/email.svg"></a>
-        </li>
-        <li class="nav-item icon">
-            <a class="nav-link" href=""><img src="../../../assets/img/instagram.svg"></a>
-        </li>
-        <li class="nav-item icon">
-            <a class="nav-link" href=""><img src="../../../assets/img/discord.svg"></a>
-        </li>
-    </ul>
 </nav>
