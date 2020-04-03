@@ -5,13 +5,13 @@
         </a>
 
         <div class="navbar-nav navbar-icon order-md-3">
-            <a class="navbar-link icon" href="" target="_blank"><img src="../../../assets/img/email.svg"></a>
-            <a class="navbar-link icon" href="" target="_blank"><img src="../../../assets/img/instagram.svg"></a>
+            <a class="navbar-link icon" href="mailto:" target="_blank"><img src="../../../assets/img/email.svg"></a>
+            <a class="navbar-link icon" href="https://instagram.com" target="_blank"><img src="../../../assets/img/instagram.svg"></a>
             <a class="navbar-link icon" href="https://discord.gg/RyG5Zaz" target="_blank"><img src="../../../assets/img/discord.svg"></a>
         </div>
 
         <div class="navbar-nav collapse-navbar col-md-9 order-md-2" [class.hideNavbar]="navbarIsHidden" [class.dropdown-collapse-navbar]="!navbarIsHidden && dropdownIsShown">
-            <a class="navbar-link active" routerLink="">Home</a>
+            <a class="navbar-link" routerLink="/home" [class.active]="currentRoute.urlAfterRedirects === '/home'">Home</a>
 
             <a (click)="showDropdown()" class="navbar-link dropdown-toggle" routerLink="">Features</a>
             <div class="navbar-dropdown" [class.showDropdown]="dropdownIsShown">
@@ -21,8 +21,8 @@
                 <a class="dropdown-link" routerLink="">Features 4</a>
             </div>
 
-            <a class="navbar-link" routerLink="">Builds</a>
-            <a class="navbar-link" routerLink="">Team</a>
+            <a class="navbar-link" routerLink="/builds" [class.active]="currentRoute.urlAfterRedirects === '/builds'">Builds</a>
+            <a class="navbar-link" routerLink="/team" [class.active]="currentRoute.urlAfterRedirects === '/team'">Team</a>
         </div>
     </div>
 </nav>
