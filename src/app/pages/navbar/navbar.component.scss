@@ -1,14 +1,162 @@
 nav {
-	position: fixed;
+	overflow: hidden;
 	background-color: rgba(0, 0, 0, 0.5);
 	width: 100%;
-	height: 60px;
 	top: 0;
 	left: 0;
-	padding-left: 10%;
+	padding: 10px 5%;
+	margin: 0;
+	transition-duration: 0.5s;
 }
 
-.icon {
+.navbar-top {
+	width: 100%;
+	margin: 0;
+}
+
+.navbar-toggle-icon {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-size: 100% 100%;
+	background-image: url("../../../assets/img/navbar-toggle.svg");
+	margin-top: 3px;
+}
+
+.navbar-icon {
+	flex-direction: row;
+	margin-left: auto;
+}
+
+img {
 	width: 40px;
 	height: 40px;
+	padding: 0 8px;
+}
+
+.navbar-link {
+	display: block;
+	font: {
+		family: 'Baskervville', serif;
+		size: 1.4em;
+	}
+	color: #fff;
+	padding: 0 8px;
+	text-decoration: none;
+	width: fit-content;
+}
+
+.navbar-link:not(.icon) {
+	padding: 4px 28px;
+}
+
+.navbar-dropdown {
+	display: none;
+}
+
+.dropdown-link {
+	display: block;
+	font: {
+		family: 'Roboto', sans-serif;
+		size: 1.2em;
+		weight: 300;
+	}
+	color: #fff;
+	white-space: nowrap;
+	padding: 4px 28px;
+	text-decoration: none;
+}
+
+@media (min-width: 768px) {
+	.navbar-toggle {
+		display: none;
+	}
+	.navbar-nav {
+		flex-direction: row;
+	}
+	.dropdown-wide {
+		display: block;
+		background-color: rgba(0, 0, 0, 0.9);
+		height: 120px;
+	}
+	.collapse-navbar {
+		position: relative;
+	}
+	.navbar-dropdown {
+		display: flex;
+		position: absolute;
+		margin-top: 60px;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-small {
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+	.collapse-navbar {
+		height: 166.4px;
+		overflow: hidden;
+		transition-duration: 0.5s;
+	}
+	.dropdown-collapse-navbar {
+		height: 313.6px;
+	}
+	.navbar-dropdown {
+		display: block;
+		height: 0;
+		overflow: hidden;
+		transition-duration: 0.5s;
+		padding-left: 25px;
+	}
+	.showDropdown {
+		height: 147.2px;
+	}
+	.hideNavbar {
+		height: 0;
+	}
+}
+
+@media (max-width: 575px) {
+	nav {
+		padding: 10px 10px;
+	}
+}
+
+.active {
+	position: relative;
+}
+.active::after {
+	display: block;
+	content: "";
+	position: absolute;
+	width: 50%;
+	height: 1px;
+	background: #fff;
+	margin-top: -5px;
+}
+
+.dropdown-toggle {
+	position: relative;
+}
+.dropdown-toggle::before {
+	content: "";
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	width: 10%;
+	height: 1.5px;
+	background: #fff;
+	transform: skew(0, -18deg);
+}
+.dropdown-toggle::after {
+	content: "";
+	position: absolute;
+	bottom: 5px;
+	right: 50%;
+	width: 10%;
+	height: 1.5px;
+	background: #fff;
+	transform: skew(0, 18deg);
+	border: 0;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NavigationEnd, Router} from '@angular/router'
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  navbarIsHidden = true;
+  dropdownIsShown = false;
+  currentRoute: NavigationEnd = {id: 0, url: '/', urlAfterRedirects: ''};
+
+  constructor(
+    private router: Router
+  ) {
+    this.router.events.subscribe(val => {
+      if (val instanceof NavigationEnd) {
+        this.currentRoute = val
+      }
+    })
+  }
 
   ngOnInit(): void {
+  }
+
+  hideNavbar() {
+    this.navbarIsHidden = !this.navbarIsHidden;
+  }
+
+  showDropdown() {
+    this.dropdownIsShown = !this.dropdownIsShown;
   }
 
 }

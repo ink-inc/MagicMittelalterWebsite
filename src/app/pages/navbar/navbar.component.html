@@ -1,31 +1,28 @@
-<nav class="row">
-    <div class="">
-        <h4>
-            Home
-        </h4>
-    </div>
-    <div class="">
-        <h4>
-            Features
-        </h4>
-    </div>
-    <div class="">
-        <h4>
-            Builds
-        </h4>
-    </div>
-    <div class="">
-        <h4>
-            Team
-        </h4>
-    </div>
-    <div class="icon">
-        <img src="../../../assets/img/email-24px.svg">
-    </div>
-    <div class="icon">
-        <img src="../../../assets/img/instagram-brands.svg">
-    </div>
-    <div class="icon">
-        <img src="../../../assets/img/discord-brands.svg">
+<nav class="navbar fixed-top" [class.navbar-small]="!navbarIsHidden" [class.dropdown-wide]="dropdownIsShown">
+    <div class="row navbar-top">
+        <a (click)="hideNavbar()" class="navbar-toggle order-md-1" routerLink="">
+            <span class="navbar-toggle-icon"></span>
+        </a>
+
+        <div class="navbar-nav navbar-icon order-md-3">
+            <a class="navbar-link icon" href="mailto:" target="_blank"><img src="../../../assets/img/email.svg"></a>
+            <a class="navbar-link icon" href="https://instagram.com" target="_blank"><img src="../../../assets/img/instagram.svg"></a>
+            <a class="navbar-link icon" href="https://discord.gg/RyG5Zaz" target="_blank"><img src="../../../assets/img/discord.svg"></a>
+        </div>
+
+        <div class="navbar-nav collapse-navbar col-md-9 order-md-2" [class.hideNavbar]="navbarIsHidden" [class.dropdown-collapse-navbar]="!navbarIsHidden && dropdownIsShown">
+            <a class="navbar-link" routerLink="/home" [class.active]="currentRoute.urlAfterRedirects === '/home'">Home</a>
+
+            <a (click)="showDropdown()" class="navbar-link dropdown-toggle" routerLink="">Features</a>
+            <div class="navbar-dropdown" [class.showDropdown]="dropdownIsShown">
+                <a class="dropdown-link" routerLink="">Features 1</a>
+                <a class="dropdown-link" routerLink="">Features 2</a>
+                <a class="dropdown-link" routerLink="">Features 3</a>
+                <a class="dropdown-link" routerLink="">Features 4</a>
+            </div>
+
+            <a class="navbar-link" routerLink="/builds" [class.active]="currentRoute.urlAfterRedirects === '/builds'">Builds</a>
+            <a class="navbar-link" routerLink="/team" [class.active]="currentRoute.urlAfterRedirects === '/team'">Team</a>
+        </div>
     </div>
 </nav>
