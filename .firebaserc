@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "magicmittelalterwebsite"
+  },
+  "targets": {
+    "magicmittelalterwebsite": {
+      "hosting": {
+        "MagicMittelalterWebsite": [
+          "magicmittelalterwebsite"
+        ]
+      }
+    }
+  }
+}
