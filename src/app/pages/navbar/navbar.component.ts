@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faDiscord } from '@fortawesome/free-brands-svg-icons';
+
 
 @Component({
   selector: 'app-navbar',
@@ -24,6 +27,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  faEnvelope = faEnvelope;
+  faInstagram = faInstagram;
+  faDiscord = faDiscord;
 
   hideNavbar() {
     this.navbarIsHidden = !this.navbarIsHidden;

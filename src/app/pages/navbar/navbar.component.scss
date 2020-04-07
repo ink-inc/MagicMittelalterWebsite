@@ -28,10 +28,12 @@ nav {
 	margin-left: auto;
 }
 
-img {
-	width: 40px;
-	height: 40px;
+fa-icon {
+	font-size: 26px;
 	padding: 0 8px;
+}
+.icon-fett {
+	margin-top: 2px;
 }
 
 .navbar-link {
@@ -47,7 +49,10 @@ img {
 }
 
 .navbar-link:not(.icon) {
-	padding: 4px 28px;
+	padding: 4px 24px;
+	&:last-of-type {
+		padding-right: 0;
+	}
 }
 
 .navbar-dropdown {
