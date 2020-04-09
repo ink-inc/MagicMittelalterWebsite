@@ -13,7 +13,7 @@
         <div class="navbar-nav collapse-navbar col-md-9 order-md-2" [class.hideNavbar]="navbarIsHidden" [class.dropdown-collapse-navbar]="!navbarIsHidden && dropdownIsShown">
             <a class="navbar-link" routerLink="/home" [class.active]="currentRoute.urlAfterRedirects === '/home'">Home</a>
 
-            <a (click)="showDropdown()" class="navbar-link dropdown-toggle" routerLink="">Features</a>
+            <a (click)="showDropdown()" class="navbar-link dropdown-toggle" routerLink=currentRoute.urlAfterRedirects>Features</a>
             <div class="navbar-dropdown" [class.showDropdown]="dropdownIsShown">
                 <a class="dropdown-link" routerLink="">Features 1</a>
                 <a class="dropdown-link" routerLink="">Features 2</a>
@@ -21,7 +21,7 @@
                 <a class="dropdown-link" routerLink="">Features 4</a>
             </div>
 
-            <a class="navbar-link" routerLink="/builds" [class.active]="currentRoute.urlAfterRedirects === '/builds'">Update-News</a>
+            <a class="navbar-link" routerLink="/update-news" [class.active]="currentRoute.urlAfterRedirects === '/update-news'">Update-News</a>
             <a class="navbar-link" routerLink="/team" [class.active]="currentRoute.urlAfterRedirects === '/team'">Team</a>
         </div>
     </div>
