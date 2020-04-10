@@ -1,85 +1,41 @@
 $update-border-radius: 15px;
 
-.headerwrapper {
-	padding: 40px 35px 30px 25px;
-}
-header {
-	background-image: url("../../../assets/img/Banner.png");
-	background-position: center;
-	padding: 100px 40px 0 40px;
-	margin-bottom: 30px;
-	background-repeat: no-repeat;
-    background-size: cover;
-}
-.h1_decoration {
-    position: relative;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 25px;
-}
-.h1_decoration::before {
-	content: "";
-	position: absolute;
-	width: 20%;
-	height: 2px;
-	background: #eaa623;
-    margin-top: -3px;
-    border-radius: 50%;
-    transition-duration: 0.5s;
-}
-.h1_decoration::after {
-	content: "";
-	position: absolute;
-	width: 10%;
-	height: 2px;
-	background: #eaa623;
-	margin-top: 2px;
-    border-radius: 50%;
-    transition-duration: 0.5s;
-}
-
 h3 {
     text-align: center;
     margin-bottom: 80px;
 }
 
-.header_decoration {
-	position: relative;
-    width: 80%;
-}
-.header_decoration::before {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 3px;
-	background: #eaa623;
-	margin-top: -9px;
-    border-radius: 50%;
-}
-.header_decoration::after {
-	content: "";
-	position: absolute;
-	width: 85%;
-	height: 3px;
-	background: #eaa623;
-	margin-top: 6px;
-	margin-left: 7.5%;
-    border-radius: 50%;
-}
-
-.updatewrapper {
+.update-wrapper {
     margin: 72px 32px;
     border: solid 0px #0f0f0f;
     border-radius: $update-border-radius;
     overflow: hidden;
     height: 300px;
 }
-.updatewrapper:hover{
+.update-wrapper:hover{
     box-shadow: 0px 0px 10px 0px #eaa623;
 }
-.updatewrapper:active{
+.update-wrapper:active{
     border: solid 2px #eaa623;
     margin: 70px 30px;
+}
+
+.update-open {
+    height: auto;
+    border: solid 2px #eaa623;
+    margin: 70px 30px;
+
+    .right-side {
+        padding-bottom: 80px;
+
+        .read-more {
+            top: unset;
+            bottom: 25px;
+        }
+    }
+    .right-side::before {
+        display: none;
+    }
 }
 
 img {
@@ -168,14 +124,10 @@ p {
 
 
 @media (max-width: 767px) {
-    .h1_decoration::before {
+    .h1-decoration::before {
         width: 40%;
     }
-    .h1_decoration::after {
+    .h1-decoration::after {
         width: 20%;
     }
-}
-
-.background {
-    height: 2000px;
 }

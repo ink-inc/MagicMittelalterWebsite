@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
-import { NavbarComponent } from './pages/navbar/navbar.component';
-import { FooterComponent } from './pages/footer/footer.component';
 import { UpdateNewsComponent } from './pages/update-news/update-news.component';
 
 import { AngularFireModule } from '@angular/fire';
@@ -16,9 +17,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     NavbarComponent,
     FooterComponent,
+    HeaderComponent,
+    HomeComponent,
     UpdateNewsComponent
   ],
   imports: [

@@ -1,7 +1,7 @@
 $sm: 991px;
 $lg: 1200px;
 
-.headerwrapper {
+.header-wrapper {
 	padding: 40px 35px 30px 25px;
 }
 header {
@@ -12,11 +12,11 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.header_decoration {
+.header-decoration {
 	position: relative;
 	width: 80%;
 }
-.header_decoration::before {
+.header-decoration::before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -25,7 +25,7 @@ header {
 	margin-top: -9px;
 	border-radius: 50%;
 }
-.header_decoration::after {
+.header-decoration::after {
 	content: "";
 	position: absolute;
 	width: 85%;
@@ -36,7 +36,7 @@ header {
 	border-radius: 50%;
 }
 
-.contentwrapper {
+.content-wrapper {
 	padding: 30px;
 	margin-bottom: 40px;
 }
@@ -52,7 +52,7 @@ img {
 	}
 }
 
-.image_decoration {
+.image-decoration {
 	position: absolute;
 	display: block;
 	width: 50%;
@@ -61,7 +61,7 @@ img {
 }
 
 @media (min-width: $lg) {
-	.image_decoration_margin_bottom {
+	.image-decoration-margin-bottom {
 		margin-bottom: 30px;
 	}
 }
@@ -78,11 +78,11 @@ img {
 	h1 {
 		margin: 10%;
 	}
-	.headerwrapper {
+	.header-wrapper {
 		padding: 0;
 		margin: 0 5% 5%;
 	}
-	.contentwrapper {
+	.content-wrapper {
 		padding: 0;
 		margin: 8% 5%;
 	}
