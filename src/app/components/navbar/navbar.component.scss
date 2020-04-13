@@ -127,26 +127,13 @@ fa-icon {
 	}
 }
 
-.active {
-	position: relative;
-}
-.active::after {
-	display: block;
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 1px;
-	background: #fff;
-	margin-top: -5px;
-}
-
 .dropdown-toggle {
 	position: relative;
 }
 .dropdown-toggle::before {
 	content: "";
 	position: absolute;
-	bottom: 5px;
+	bottom: 3px;
 	left: 50%;
 	width: 8px;
 	height: 1.5px;
@@ -156,11 +143,28 @@ fa-icon {
 .dropdown-toggle::after {
 	content: "";
 	position: absolute;
-	bottom: 5px;
+	bottom: 3px;
 	right: 50%;
 	width: 8px;
 	height: 1.5px;
 	background: #fff;
 	transform: skew(0, 18deg);
 	border: 0;
+}
+
+.active {
+	position: relative;
+	color: #eaa623;
+}
+.active::after {
+	display: block;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background: #eaa623;
+	margin-top: 11px;
+}
+.active-dropdown {
+	color: #eaa623;
 }

@@ -6,11 +6,26 @@ h3 {
 }
 
 .update-wrapper {
+    position: relative;
     margin: 72px 32px;
     border: solid 0px #0f0f0f;
     border-radius: $update-border-radius;
     overflow: hidden;
     height: 300px;
+    transition: height 2s, border-color 2s, border-width 1s, box-shadow 0.5s;
+    box-shadow: 0 0 0 0 #eaa623;
+}
+.update-wrapper::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    left: 25%;
+    bottom: 0;
+    width: 75%;
+    height: 300px;
+    background: #ffffff;
+    background: linear-gradient(to bottom, #00000000 40%, #202020 88%);
+    transition-duration: 5s;
 }
 .update-wrapper:hover{
     box-shadow: 0px 0px 10px 0px #eaa623;
@@ -18,24 +33,6 @@ h3 {
 .update-wrapper:active{
     border: solid 2px #eaa623;
     margin: 70px 30px;
-}
-
-.update-open {
-    height: auto;
-    border: solid 2px #eaa623;
-    margin: 70px 30px;
-
-    .right-side {
-        padding-bottom: 80px;
-
-        .read-more {
-            top: unset;
-            bottom: 25px;
-        }
-    }
-    .right-side::before {
-        display: none;
-    }
 }
 
 img {
@@ -73,22 +70,14 @@ p {
     border-left: none;
     border-top-right-radius: $update-border-radius;
     border-bottom-right-radius: $update-border-radius;
-    padding: 20px 20px 20px 40px;
-}
-.right-side::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 300px;
-    background: #ffffff;
-    background: linear-gradient(to bottom, #00000000 40%, #202020 88%);
+    padding: 20px 20px 80px 40px;
 }
 
 .read-more {
     position: absolute;
-    top: 240px;
-    left: 25%;
+    z-index: 11;
+    bottom: 25px;
+    left: 37.5%;
     width: 50%;
     text-align: center;
     font: {
@@ -120,6 +109,24 @@ p {
 }
 
 
+
+.update-open {
+    border: solid 2px #eaa623;
+    margin: 70px 30px;
+    &::before {
+        height: 0;
+    }
+    .read-more::before {
+        top: 2px;
+        bottom: unset;
+        transform: skew(0, 18deg);
+    }
+    .read-more::after {
+        top: 2px;
+        bottom: unset;
+        transform: skew(0, -18deg);
+    }
+}
 
 
 

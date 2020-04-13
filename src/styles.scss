@@ -3,7 +3,7 @@
 body {
 	font: {
 		family: 'Roboto', sans-serif;
-		size: 0.9em;
+		size: 1em;
 		weight: 400;
 	}
 	background-color: #0f0f0f;
@@ -13,7 +13,7 @@ body {
 h1 { //header-heading
 	font: {
 		family: 'Baskervville', serif;
-		size: 4em;
+		size: 3em;
 		weight: 400;
 	}
 	text-align: center;
@@ -22,7 +22,7 @@ h1 { //header-heading
 h2 { //content-heading
 	font: {
 		family: 'Baskervville', serif;
-		size: 2.6em;
+		size: 2.2em;
 		weight: 100;
 	}
 }
@@ -39,4 +39,5 @@ p {
 	font-family: 'Roboto', sans-serif;
 	margin-bottom: 0;
 	color: #9f9f9f;
+	font-size: 0.9em
 }
