@@ -1,0 +1,145 @@
+$update-border-radius: 15px;
+
+.update-wrapper {
+    position: relative;
+    margin: 70px 30px;
+    border: solid 0px #0f0f0f;
+    border-radius: $update-border-radius;
+    overflow: hidden;
+    height: 300px;
+    transition: height 2s, border-color 2s, border-width 1s, box-shadow 0.5s;
+    box-shadow: 0 0 0 0 #0f0f0f;
+}
+.update-wrapper::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    left: 25%;
+    bottom: 0;
+    width: 75%;
+    height: 300px;
+    background: #ffffff;
+    background: linear-gradient(to bottom, #00000000 40%, #202020 88%);
+    transition: height 5s;
+}
+.update-wrapper:hover{
+    box-shadow: 0px 0px 10px 0px #eaa623;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.left-side {
+    background-color: #363636;
+    padding: 0;
+    img {
+        border-top-left-radius: inherit;
+        max-height: 250px;
+    }
+    p {
+        color: #fff;
+    }
+}
+
+.version {
+    padding: 12px 20px 25px 20px
+}
+
+.left-side-content {
+    padding: 100px 20px;
+    transition-duration: 2s;
+}
+
+.right-side {
+    position: relative;
+    background-color: #202020;
+    padding: 20px 20px 80px 40px;
+    height: max-content;
+    p {
+        transition-duration: 2s;
+    }
+}
+
+.read-more {
+    position: absolute;
+    z-index: 11;
+    bottom: 25px;
+    left: 37.5%;
+    width: 50%;
+    text-align: center;
+    font: {
+        family: 'Baskervville', serif;
+        size: 1.4em;
+        weight: 400;
+    }
+}
+.read-more::before {
+	content: "";
+	position: absolute;
+	bottom: 2px;
+	left: 50%;
+	width: 15px;
+	height: 1.5px;
+	background: #fff;
+	transform: skew(0, -18deg);
+}
+.read-more::after {
+	content: "";
+	position: absolute;
+	bottom: 2px;
+	right: 50%;
+	width: 15px;
+	height: 1.5px;
+	background: #fff;
+	transform: skew(0, 18deg);
+	border: 0;
+}
+
+
+
+.update-open {
+    border: solid 2px #eaa623;
+    &::before {
+        height: 0;
+    }
+    .left-side-content {
+        padding-top: 10px;
+    }
+    .right-side p {
+        color: #e0e0e0;
+    }
+    .read-more::before {
+        top: 2px;
+        bottom: unset;
+        transform: skew(0, 18deg);
+    }
+    .read-more::after {
+        top: 2px;
+        bottom: unset;
+        transform: skew(0, -18deg);
+    }
+}
+
+@media (min-width: 768px) {
+    @media (max-width: 991px) {
+        .update-wrapper {
+            margin: 70px -30px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .update-wrapper::before {
+        width: 100%;
+        left: 0;
+    }
+    .read-more {
+        left: 25%;
+    }
+}

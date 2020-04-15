@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top" [class.navbar-small]="!navbarIsHidden" [class.dropdown-wide]="dropdownIsShown">
     <div class="row navbar-top">
-        <a (click)="hideNavbar()" class="navbar-toggle order-md-1" routerLink="">
+        <a (click)="hideNavbar()" class="navbar-toggle order-md-1" routerLink="Navbar öffnen/schließen">
             <span class="navbar-toggle-icon"></span>
         </a>
 
@@ -13,7 +13,7 @@
         <div class="navbar-nav collapse-navbar col-md-9 order-md-2" [class.hideNavbar]="navbarIsHidden" [class.dropdown-collapse-navbar]="!navbarIsHidden && dropdownIsShown">
             <a class="navbar-link" routerLink="/home" [class.active]="currentRoute.urlAfterRedirects === '/home'">Home</a>
 
-            <a (click)="showDropdown()" class="navbar-link dropdown-toggle" [class.active-dropdown]="currentRoute.urlAfterRedirects.includes('feature')" routerLink=currentRoute.urlAfterRedirects>Features</a>
+            <a (click)="showDropdown()" class="navbar-link dropdown-toggle" [class.active-dropdown]="currentRoute.urlAfterRedirects.includes('feature')" routerLink="Dropdown öffnen/schließen">Features</a>
             <div class="navbar-dropdown" [class.showDropdown]="dropdownIsShown">
                 <a class="dropdown-link" routerLink="">Features 1</a>
                 <a class="dropdown-link" routerLink="">Features 2</a>

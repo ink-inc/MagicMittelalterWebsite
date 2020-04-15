@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { NewsCollapsibleComponent } from './components/news-collapsible/news-collapsible.component';
+
 import { HomeComponent } from './pages/home/home.component';
 import { UpdateNewsComponent } from './pages/update-news/update-news.component';
 
@@ -20,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
+    NewsCollapsibleComponent,
     HomeComponent,
     UpdateNewsComponent
   ],

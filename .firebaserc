@@ -1,14 +1,5 @@
 {
   "projects": {
-    "default": "magicmittelalterwebsite"
-  },
-  "targets": {
-    "magicmittelalterwebsite": {
-      "hosting": {
-        "MagicMittelalterWebsite": [
-          "magicmittelalterwebsite"
-        ]
-      }
-    }
+    "default": "mmgwebsite-f2de1"
   }
 }

@@ -1,17 +1,29 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Content } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
   selector: 'app-update-news',
   templateUrl: './update-news.component.html',
   styleUrls: ['./update-news.component.scss']
 })
-export class UpdateNewsComponent implements OnInit, AfterViewInit {
+export class UpdateNewsComponent implements OnInit {
 
-  openUpdates: HTMLCollection = document.getElementsByClassName("update-open");
   headerData = {
     title: "Update-News",
     subtitle: "Moin Leude, hier gibts bald <br> <u>WÖCHENTLICHE UPDATES</u>",
     backgroundImageUrl: "../../../assets/img/Banner.png"
+  };
+  updateData = {
+    leftSide: {
+      imageUrl: "update-preview-0.0.0.8.1.png",
+      imageAlt: "Update Preview",
+      version: "0.0.0.8.1",
+      content: "Content :D"
+    },
+    rightSide: {
+      heading: "Coole Überschrift",
+      content: "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>"
+    }
   };
 
   constructor() { }
@@ -19,27 +31,4 @@ export class UpdateNewsComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
   }
 
-  ngAfterViewInit() {
-    document.getElementsByClassName("update-wrapper")
-  }
-
-  readMore(clickedUpdate) {
-    if (clickedUpdate.classList.length == 2) { //open Update-Wrapper
-      if (this.openUpdates.length > 0) { //check for opened Update-Wrappers
-        for (let i = 0; i < this.openUpdates.length; i++) {
-          this.closeUpdate(this.openUpdates[i]); //close other Update-Wrappers
-        }
-      }
-      clickedUpdate.style.setProperty('Height', clickedUpdate.children[1].offsetHeight + 'px'); //Update-Wrapper Height --> like right-side
-      clickedUpdate.lastChild.innerText = "Weniger lesen";
-      clickedUpdate.classList.add("update-open"); //add class update-open
-    } else {
-      this.closeUpdate(clickedUpdate); //close Update-Wrapper
-    }
-  }
-  closeUpdate(closingUpdate) { //close Update-Wrapper
-    closingUpdate.style.setProperty('Height', '300px'); //Update-Wrapper Height --> 300px
-    closingUpdate.lastChild.innerText = "Mehr lesen";
-    closingUpdate.classList.remove("update-open"); //remove class update-open
-  }
 }

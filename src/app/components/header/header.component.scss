@@ -60,3 +60,12 @@ h3 {
 	margin-left: 7.5%;
     border-radius: 50%;
 }
+
+@media (max-width: 767px) {
+    .h1-decoration::before {
+        width: 40%;
+    }
+    .h1-decoration::after {
+        width: 20%;
+    }
+}

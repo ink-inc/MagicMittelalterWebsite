@@ -1,0 +1,12 @@
+<div #refUpdate class="row update-wrapper">
+    <div class="left-side col-3 order-last order-md-first">
+        <img [src]="'assets/img/' + updateData.leftSide.imageUrl" [alt]="updateData.leftSide.imageAlt">
+        <p [innerText]="'Version: ' + updateData.leftSide.version" class="version"></p>
+        <div [innerHTML]="updateData.leftSide.content" class="left-side-content"></div>
+    </div>
+    <div class="right-side col-12 col-md-9 order-first order-md-last">
+        <h2 [innerText]="updateData.rightSide.heading"></h2>
+        <div [innerHTML]="updateData.rightSide.content"></div>
+    </div>
+    <div (click)="readMore(refUpdate)" class="read-more">Mehr lesen</div>
+</div>

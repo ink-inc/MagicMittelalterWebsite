@@ -71,6 +71,48 @@ fa-icon {
 	text-decoration: none;
 }
 
+.dropdown-toggle {
+	position: relative;
+}
+.dropdown-toggle::before {
+	content: "";
+	position: absolute;
+	bottom: 3px;
+	left: 50%;
+	width: 8px;
+	height: 1.5px;
+	background: #fff;
+	transform: skew(0, -18deg);
+}
+.dropdown-toggle::after {
+	content: "";
+	position: absolute;
+	bottom: 3px;
+	right: 50%;
+	width: 8px;
+	height: 1.5px;
+	background: #fff;
+	transform: skew(0, 18deg);
+	border: 0;
+}
+
+.active {
+	position: relative;
+	color: #eaa623;
+}
+.active::after {
+	display: block;
+	content: "";
+	position: absolute;
+	bottom: -14px;
+	width: 100%;
+	height: 3px;
+	background: #eaa623;
+}
+.active-dropdown {
+	color: #eaa623;
+}
+
 @media (min-width: 768px) {
 	.navbar-toggle {
 		display: none;
@@ -119,52 +161,17 @@ fa-icon {
 	.hideNavbar {
 		height: 0;
 	}
+	.active::after {
+		top: 0;
+		left: -19px;
+		bottom: unset;
+		width: 5px;
+		height: 100%;
+	}
 }
 
 @media (max-width: 575px) {
 	nav {
 		padding: 10px 10px;
 	}
-}
-
-.dropdown-toggle {
-	position: relative;
-}
-.dropdown-toggle::before {
-	content: "";
-	position: absolute;
-	bottom: 3px;
-	left: 50%;
-	width: 8px;
-	height: 1.5px;
-	background: #fff;
-	transform: skew(0, -18deg);
-}
-.dropdown-toggle::after {
-	content: "";
-	position: absolute;
-	bottom: 3px;
-	right: 50%;
-	width: 8px;
-	height: 1.5px;
-	background: #fff;
-	transform: skew(0, 18deg);
-	border: 0;
-}
-
-.active {
-	position: relative;
-	color: #eaa623;
-}
-.active::after {
-	display: block;
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 3px;
-	background: #eaa623;
-	margin-top: 11px;
-}
-.active-dropdown {
-	color: #eaa623;
 }

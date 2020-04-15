@@ -25,6 +25,7 @@ export class NavbarComponent implements OnInit {
     this.router.events.subscribe(val => {
       if (val instanceof NavigationEnd) {
         this.currentRoute = val
+        window.scrollTo(0, 0)
       }
     })
   }

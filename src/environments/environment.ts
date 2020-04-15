@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyBT4Z7GNqnVjkWAtS7y5Cb4ujxB6QhXzF4",
-    authDomain: "magicmittelalterwebsite.firebaseapp.com",
-    databaseURL: "https://magicmittelalterwebsite.firebaseio.com",
-    projectId: "magicmittelalterwebsite",
-    storageBucket: "magicmittelalterwebsite.appspot.com",
-    messagingSenderId: "293014852213",
-    appId: "1:293014852213:web:77c65e83c677b2db38de3c",
-    measurementId: "G-W97N9EQDH7"
+    apiKey: "AIzaSyAVGiWZjcINtqUMTGdBJW7zeW87WT75fSI",
+    authDomain: "mmgwebsite-f2de1.firebaseapp.com",
+    databaseURL: "https://mmgwebsite-f2de1.firebaseio.com",
+    projectId: "mmgwebsite-f2de1",
+    storageBucket: "mmgwebsite-f2de1.appspot.com",
+    messagingSenderId: "332691159272",
+    appId: "1:332691159272:web:f12c89b976cf4a5bf8b15d",
+    measurementId: "G-VHYZVMHGWK"
   }
 };
 

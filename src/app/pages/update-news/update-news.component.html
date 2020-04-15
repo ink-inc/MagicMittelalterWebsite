@@ -1,44 +1,5 @@
 <app-header [headerData]="headerData"></app-header>
 <div class="container">
-    <div #refUpdate2 class="row update-wrapper">
-        <div class="left-side col-3">
-            <img src="assets/img/update-preview-0.0.0.8.1.png" alt="Update Preview">
-            <div class="left-side-content">
-                <p>
-                    Version: 0.0.0.8.1
-                </p>
-            </div>
-        </div>
-        <div class="right-side col-9">
-            <h2>
-                Dialog hinzugefügt!!!!!!!!!
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-        </div>
-        <div (click)="readMore(refUpdate2)" class="read-more">Mehr lesen</div>
-    </div>
-
-
-
-    <div #refUpdate1 class="row update-wrapper">
-        <div class="left-side col-3">
-            <img src="assets/img/update-preview-0.0.0.8.1.png" alt="Update Preview">
-            <div class="left-side-content">
-                <p>
-                    Version: 0.0.0.8.1
-                </p>
-            </div>
-        </div>
-        <div class="right-side col-9">
-            <h2>
-                Dialog hinzugefügt!!!!!!!!!
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-        </div>
-        <div (click)="readMore(refUpdate1)" class="read-more">Mehr lesen</div>
-    </div>
+    <app-news-collapsible [updateData]="updateData"></app-news-collapsible>
+    <app-news-collapsible [updateData]="updateData"></app-news-collapsible>
 </div>
